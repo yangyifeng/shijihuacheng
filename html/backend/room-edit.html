@@ -49,8 +49,8 @@
         <div class="navbar-collapse collapse">
           <!--头部菜单-->
           <ul class="nav navbar-nav">
-            <li class="active" ><a href="room-list.html">套房</a></li>
-            <li><a href="charge-list.html">收费</a></li>
+            <li class="active" ><a href="room-list.html">套房管理</a></li>
+            <li><a href="charge-list.html">收费管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -426,7 +426,44 @@
                 </div>
 
                 <!--物业费缴费记录-->
-                <div role="tabpanel" class="tab-pane" id="fee">...</div>
+                <div role="tabpanel" class="tab-pane" id="fee">
+                  <br />
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>缴费日期</th>
+                        <th>收款人</th>
+                        <th>付款方式</th>
+                        <th>物业费期限</th>
+                        <th>打印收据</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2016-09-14 14:59:30</td>
+                        <td>管理员A</td>
+                        <td>现金</td>
+                        <td>2016-10-01 至 2017-09-30</td>
+                        <td>
+                          <a href="#" class="btn btn-xs btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span> 打印收据
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2017-09-28 12:23:34</td>
+                        <td>微信号：世纪花城公众号</td>
+                        <td>微信转账（流水号：001293847567894836）</td>
+                        <td>2017-10-01 至 2018-09-30</td>
+                        <td>
+                          <a href="#" class="btn btn-xs btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span> 打印收据
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
             </div>
