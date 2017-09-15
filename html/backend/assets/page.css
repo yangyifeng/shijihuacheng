@@ -317,5 +317,20 @@ body {
   width: 65%;
 }
 form.order-notify{
+
   margin-bottom: 35px;
+  
 }
+
+
+
+/*控制面板样式*/
+.txt{
+  width: 50%;
+ 
+  float: left;
+}
+.txt h5{
+   
+    text-align: center;
+  }

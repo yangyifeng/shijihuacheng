@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Yoozi Inc.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
+    <link rel="icon" href="">
+
+    <title>控制面板</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./assets/vendors/distpicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
+    <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
+    <link href="./assets/page.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="">
+    <!--[if lt IE 10]>
+    <div id="browser-warning" class="contextual bg-danger center navbar-fixed-top">
+      <div class="container">
+        <i class="glyphicon glyphicon-warning-sign"></i> 目前 物业管理系统不支持 IE 10 以下浏览器使用，请升级浏览器或更换浏览器。推荐使用 Chrome 浏览器。
+      </div>
+    </div>
+    <![endif]-->
+
+    <!--头部主标题导航-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/backend/">
+            物业管理系统
+            <span class="badge">1.0</span>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <!--头部菜单-->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="control.html">控制面板</a></li>
+            <li><a href="room-list.html">套房管理</a></li>
+            <li ><a href="cost-list.html">收费管理</a></li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+    <!-- #头部主标题导航-->    
+        
+    <div class="list-container">
+      
+        <!--页面主体-->
+          <div class="list-container">
+
+            <!--页面左侧-->
+            <div class="sidebar">
+              <h1>按条件查询</h1>
+              <!--查询表单-->
+              <form method="get">
+                <div class="form-group">
+                  <label>请输入 业主姓名/手机号码/房号</label>
+                  <input type="text" class="form-control" name="word" value="" placeholder="">
+                </div>
+                <!--div class="form-group">
+                  <label>注册时间</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control datepicker" name="date[from]" value="" placeholder="0000-00-00">
+                    <span class="input-group-addon">至</span>
+                    <input type="text" class="form-control datepicker" name="date[to]" value="" placeholder="0000-00-00">
+                  </div>
+                </div-->
+                <div class="form-group-btns">
+                  <button type="submit" class="btn btn-sm btn-primary">筛选</button>
+                  <a href="#" class="btn btn-sm btn-default">重置</a>
+                </div>
+              </form>
+
+            </div>
+
+            <!--页面右侧-->
+            <div class="main">
+
+              <!--列表头部-->
+              <div>
+                <h3 align="center">
+                  <!--列表的标题-->
+                  欠费用户
+                  
+                </h3>
+              </div>
+              <!-- #列表头部-->
+
+              <!--逾期用户-->
+                 
+                  <div class="txt">
+                      <h5 style="float: center;">已逾期用户</h5> 
+                        <table class="table" >
+
+                            <tbody style="border-right: 1px solid #999">
+                              <tr >
+                                <td>单元号</td>
+                                <td>房间号</td>
+                                <td>户主姓名</td>
+                                <td>电话</td>
+                                <td>费用</td>
+                                <td>到期时间</td>
+                              </tr>
+                            </tbody>
+
+
+                           <tbody style="border-right: 1px solid #999">
+                              <tr >
+                                <td>洋房一单元</td>
+                                <td>201</td>
+                                <td>小车</td>
+                                <td>12345646</td>
+                                <td>47641</td>
+                                <td>2016-09-15</td>
+                              </tr>
+                            </tbody>
+
+                             <tbody style="border-right: 1px solid #999">
+                              <tr >
+                                <td>洋房四单元</td>
+                                <td>202</td>
+                                <td>小车</td>
+                                <td>12345646</td>
+                                <td>47641</td>
+                                <td>2016-09-15</td>
+                              </tr>
+                            </tbody>
+
+
+                          
+                          </table>
+                      </div>
+              
+
+              <!-- 七天到期用户-->
+              <div class="txt"  style="float: right;">
+                      <h5  text-align=center">七天到期用户</h5> 
+                        <table class="table ">
+
+                            <tbody >
+                              <tr >
+                                <td>单元号</td>
+                                <td>房间号</td>
+                                <td>户主姓名</td>
+                                <td>电话</td>
+                                <td>费用</td>
+                                <td>到期时间</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              <tr >
+                                <td>洋房二单元</td>
+                                <td>202</td>
+                                <td>小城</td>
+                                <td>1365752464</td>
+                                <td>4564</td>
+                                <td>2017-09-15</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              <tr >
+                                <td>洋房三单元</td>
+                                <td>203</td>
+                                <td>小晨</td>
+                                <td>13657112464</td>
+                                <td>4564</td>
+                                <td>2017-09-15</td>
+                              </tr>
+                            </tbody>
+
+                            
+                          </table>
+                      
+                       
+
+                       <!--页码-->
+              <nav class="pull-right float:right">
+                <ul class="pagination pagination-sm">
+                  <ul class="pagination">
+                    <li class="disabled"><span>&laquo;</span></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li class="disabled"><span>...</span></li>
+                    <li><a href="#">65</a></li>
+                    <li><a href="#">66</a></li>
+                    <li><a href="#" rel="next">&raquo;</a></li>
+                  </ul>
+                </ul>
+              </nav>
+              <!-- #页码-->
+                 
+
+             </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <!-- /container -->
+
+    <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
+    <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendors/distpicker/bootstrap-datepicker.min.js"></script>
+    <script src="./assets/vendors/distpicker/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="./assets/vendors/chosen/chosen.jquery.min.js"></script>
+    <script src="./assets/vendors/lodash.min.js"></script>
+    <script src="./assets/vendors/jquery.confirm.min.js"></script>
+    <script src="./assets/yoozi.js"></script>
+    <script src="./assets/common.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        //日期选择
+        yoozi.datapicker('.datepicker');
+
+      });
+    </script>
+  </body>
+</html>

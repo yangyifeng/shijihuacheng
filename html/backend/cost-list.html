@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
     <link rel="icon" href="">
 
-    <title>楼盘列表 </title>
+    <title>收费管理 </title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -50,8 +50,8 @@
           <!--头部菜单-->
           <ul class="nav navbar-nav">
             <li><a href="control.html">控制面板</a></li>
-            <li class="active" ><a href="room-list.html">套房管理</a></li>
-            <li ><a href="cost-list.html">收费管理</a></li>
+            <li ><a href="room-list.html">套房管理</a></li>
+            <li class="active" ><a href="cost-list.html">收费管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -75,34 +75,10 @@
           <div class="navbar-collapse collapse">
             <ul class="sub-list">
               <li class='bread'>
-                套房管理:
+                收费管理:
               </li>
               <li class='active'>
-                <a href="room-list.html">套房列表</a>
-              </li>
-              <li>
-                <a href="room-add.html">添加套房</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="building-list.html">单元列表</a>
-              </li>
-              <li>
-                <a href="building-add.html">添加单元</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="type-list.html">户型列表</a>
-              </li>
-              <li>
-                <a href="type-add.html">添加户型</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="fee-list.html">物业费标准列表</a>
-              </li>
-              <li>
-                <a href="fee-add.html">物业费标准管理</a>
+                <a href="cost-list.html">物业费</a>
               </li>
             </ul>
             <ul class="sub-btns">
@@ -125,8 +101,12 @@
               <!--查询表单-->
               <form method="get">
                 <div class="form-group">
-                  <label>请输入 业主姓名/手机号码/房号</label>
+                  <label>请输入 单元号</label>
                   <input type="text" class="form-control" name="word" value="" placeholder="">
+                  <label>请输入 业主姓名/房间号/电话号码</label>
+                  <input type="text" class="form-control" name="word" value="" placeholder="">
+                  
+
                 </div>
                 <!--div class="form-group">
                   <label>注册时间</label>
@@ -151,7 +131,7 @@
               <div>
                 <h5>
                   <!--列表的标题-->
-                  套房列表
+                  用户列表
                   <!--迷你页码-->
                   <span class="pagination-total pull-right">
                     查询结果: 660 条记录，当前 1/66 页
@@ -193,54 +173,61 @@
                       <td>13333333333</td>
                       <td>2018-02-17</td>
                       <td>
-                        <a href="room-edit.html" class="btn btn-xs btn-primary">
+                        <a href="cost-add.html" class="btn btn-xs btn-primary">
                           <span class="glyphicon glyphicon-pencil"></span>
-                          管理
-                        </a>
-                        <a href="#" class="btn btn-xs btn-danger">
-                          <span class="glyphicon glyphicon-remove"></span>
-                          删除
+                          缴费
                         </a>
                       </td>
                     </tr>
+                   
+                   <tr>
+                      <td>洋房三单元</td>
+                      <td>601</td>
+                      <td>三房两厅（119平米）</td>
+                      <td>47.6元/月</td>
+                      <td>张三</td>
+                      <td>13333333333</td>
+                      <td>2018-02-17</td>
+                      <td>
+                        <a href="cost-add.html" class="btn btn-xs btn-primary">
+                          <span class="glyphicon glyphicon-pencil"></span>
+                          缴费
+                        </a>
+                      </td>
+                    </tr>
+
                     <tr>
                       <td>洋房三单元</td>
                       <td>602</td>
-                      <td>两房两厅（89平米）</td>
-                      <td>35.6元/月</td>
-                      <td>李四</td>
-                      <td>14444444444</td>
-                      <td>2017-02-17 <span class="label label-default">已延期</span></td>
+                      <td>三房两厅（119平米）</td>
+                      <td>47.6元/月</td>
+                      <td>张三</td>
+                      <td>13333333333</td>
+                      <td>2018-02-17</td>
                       <td>
-                        <a href="room-edit.html" class="btn btn-xs btn-primary">
+                        <a href="cost-add.html" class="btn btn-xs btn-primary">
                           <span class="glyphicon glyphicon-pencil"></span>
-                          管理
-                        </a>
-                        <a href="#" class="btn btn-xs btn-danger">
-                          <span class="glyphicon glyphicon-remove"></span>
-                          删除
+                          缴费
                         </a>
                       </td>
                     </tr>
+
                     <tr>
                       <td>洋房三单元</td>
                       <td>603</td>
-                      <td>四房两厅（139平米）</td>
-                      <td>55.6元/月</td>
-                      <td>王五</td>
-                      <td>15555555555</td>
-                      <td>2017-08-17 <span class="label label-warning">七天内到期</span></td>
+                      <td>三房两厅（119平米）</td>
+                      <td>47.6元/月</td>
+                      <td>张三</td>
+                      <td>13333333333</td>
+                      <td>2018-02-17</td>
                       <td>
-                        <a href="room-edit.html" class="btn btn-xs btn-primary">
+                        <a href="cost-add.html" class="btn btn-xs btn-primary">
                           <span class="glyphicon glyphicon-pencil"></span>
-                          管理
-                        </a>
-                        <a href="#" class="btn btn-xs btn-danger">
-                          <span class="glyphicon glyphicon-remove"></span>
-                          删除
+                          缴费
                         </a>
                       </td>
-                    </tr>    
+                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
