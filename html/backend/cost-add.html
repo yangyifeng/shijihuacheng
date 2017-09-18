@@ -19,7 +19,6 @@
     <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
     <link href="./assets/page.css" rel="stylesheet">
 
-    
     <!-- Custom styles for this template -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -247,31 +246,60 @@
                       </div>
                       <!--保存按钮-->
                       <div>
-                        <table class="table form-table">
+                        <!-- <table class="table form-table">
                           <tbody>
                             <tr>
                               <td class="form-title"></td>
                               <td>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">确定</button>
+                               <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"> <button type="submit"  class="btn btn-primary btn-lg btn-block">确定</button> </a>
+                               <div id="fade" class="black_overlay"></div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table> -->
+
+                        <!--弹窗界面开始-->
+                          <div id="light" class="page-container" style="display: none;">
+                              <p style="text-align: center; z-index: 1000">缴费成功</p>
+                             
+                            <a href="cost-list.html" button  type="submit" id="bt" class="btn" style="z-index: 1001;"> 返回</a>
+                            <a href="shouju.html" button type="submit" id="bt" class="btn" style="z-index: 1001"> 打印收据 </a>
+                          </div>
+                          <!--弹窗界面结束-->
+                      </div>
+                  </form>
+                  <table class="table form-table">
+                          <tbody>
+                            <tr>
+                              <td class="form-title"></td>
+                              <td>
+                               <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"> <button type="submit"  class="btn btn-primary btn-lg btn-block">确定</button> </a>
+                               <div id="fade" ></div>
+
+
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                  </form>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
     </div> 
     <!-- /container -->
 
+
+ 
+
+
+
+
     
-    <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="./assets/vendors/distpicker/bootstrap-datepicker.min.js"></script>
-    <script src="./assets/vendors/distpicker/bootstrap-datepicker.zh-CN.min.js"></script>
+   <!--  <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script> -->
+   <!--  <script src="./assets/vendors/distpicker/bootstrap-datepicker.min.js"></script> -->
+  <!--  <script src="./assets/vendors/distpicker/bootstrap-datepicker.zh-CN.min.js"></script>
+   -->
     
   </body>
 </html>
