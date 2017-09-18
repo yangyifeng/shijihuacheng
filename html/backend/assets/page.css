@@ -317,5 +317,138 @@ body {
   width: 65%;
 }
 form.order-notify{
+
   margin-bottom: 35px;
+  
+}
+
+
+
+/*控制面板样式*/
+.txt{
+  width: 50%;
+ 
+  float: left;
+}
+.txt h5{
+   
+    text-align: center;
+  }
+
+
+  /*缴费页面*/
+
+   /*弹窗界面样式开始*/
+.page-container{
+  width: 50%;
+    height: 200px;
+    /* min-height: 300px; */
+    background-color: #337ab7;
+    opacity: 0.9;
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    /* left: 30%; */
+    /* z-index: 1; */
+    overflow: auto;
+    border-radius: 5px;
+  }
+.page-container p{
+    padding-left:10%;
+    padding-right: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "宋体";
+    letter-spacing: 1px;
+    padding-top:50px;
+    line-height:19px;
+  }
+form{
+   position: relative;
+    width: 90%;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+#bt{
+ bottom: 40px;
+    margin-top: 30px;
+    /* padding-top: 100px; */
+    left: 10px;
+    background: #fff;
+    width: 30%;
+    max-width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  
+}
+#light a{
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+
+
+/*收据页面样式开始*/
+.list{
+  height: 380px;
+  width: 800px;
+  background-color: #fff;
+}
+.con{
+  width: 700px;
+  text-align: center;
+  margin:0 auto;
+  
+}
+
+.logo{
+  width: 80px;
+  height:80px;
+  float: left;
+  margin-bottom: 15px;
+   margin-top: 30px;
+}
+.logo img{
+  width: 80px;
+  height: 80px;
+}
+.title{
+  float: left;
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 550px;
+  margin-top: 15px;
+ 
+}
+.title h2{
+   font-size: 18px;
+   padding-bottom: 10px;
+}
+.title .icon{
+  border-bottom: solid 1px; #333;
+  margin-left: 50px;
+
+
+}
+
+.number{
+  float: right;
+}
+
+#tab tr td{
+  text-align: center;
+  height: 35px;
+  width: 57px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#tab tr td span{
+  width: 50px;
 }
