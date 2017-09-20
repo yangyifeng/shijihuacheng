@@ -18,8 +18,7 @@
     <link href="./assets/vendors/distpicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
     <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
     <link href="./assets/page.css" rel="stylesheet">
-
-    
+   
     <!-- Custom styles for this template -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +48,7 @@
         <div class="navbar-collapse collapse">
           <!--头部菜单-->
           <ul class="nav navbar-nav">
-            <li><a href="control.html">控制面板</a></li>
+            <li><a href="control-yuqi.html">控制面板</a></li>
             <li class="active" ><a href="room-list.html">套房管理</a></li>
             <li><a href="cost-list.html">收费管理</a></li>
           </ul>
@@ -124,15 +123,15 @@
           <div class="main">
 
             <div>
-              <ul class="nav nav-tabs" role="tablist">
+              <ul class="nav nav-tabs" role="tablist" id="ulbody">
                 <li role="presentation" class="active">
-                  <a href="#base" aria-controls="base" role="tab" data-toggle="tab">套房信息</a>
+                  <a href="#base" aria-controls="base" role="tab" data-toggle="tab" >套房信息</a>
                 </li>
                 <li role="presentation">
-                  <a href="#person" aria-controls="person" role="tab" data-toggle="tab">业主信息</a>
+                  <a href="#person" aria-controls="person" role="tab" data-toggle="tab" >业主信息</a>
                 </li>
                 <li role="presentation">
-                  <a href="#file" aria-controls="file" role="tab" data-toggle="tab">相关文件</a>
+                  <a href="#file" aria-controls="file" role="tab" data-toggle="tab" >相关文件</a>
                 </li>
                 <li role="presentation">
                   <a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">时间轴</a>
@@ -145,13 +144,13 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <!--套房信息-->
-                <div role="tabpanel" class="tab-pane active" id="base">
+                <div role="tabpanel" class="tab-pane active " id="base" >
                   <br />
                   <form class="form-horizontal" enctype="multipart/form-data"  action="#/backend/admin/product" method="post">
                       <input type="hidden" name="_token" value="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
                       <input type="hidden" name="id" value="0"/>
                       <div>
-                        <table class="form-table">
+                        <table class="form-table ">
                           <tbody>
                             <tr>
                               <td class="form-title">
@@ -227,7 +226,7 @@
                 </div>
 
                 <!--业主信息-->
-                <div role="tabpanel" class="tab-pane" id="person">
+                <div role="tabpanel" class="tab-pane " id="person" >
                   <br />
                   <div class="row">
                     <div class="col-md-6">
@@ -294,7 +293,7 @@
                 </div>
 
                 <!--相关文件-->
-                <div role="tabpanel" class="tab-pane" id="file">
+                <div role="tabpanel" class="tab-pane" id="file" >
                   <br />
                   <table class="table table-striped">
                     <thead>
@@ -367,7 +366,7 @@
                 </div>
 
                 <!--时间轴-->
-                <div role="tabpanel" class="tab-pane" id="timeline">
+             <div role="tabpanel" class="tab-pane " id="timeline" >
                   <br />
                   <table class="table table-striped">
                     <thead>
@@ -472,6 +471,30 @@
         </div>
     </div> 
     <!-- /container -->
+    
+<script type="text/javascript">
+        setTimeout(function(){
+                
+          var location = window.location.href;
+          var zifuchuan= location+"";
+          var shuzu=zifuchuan.split('?');
+          var hanshu=(shuzu[1])*1;
+          
+          var oLis=document.getElementById("ulbody").getElementsByTagName("li");
+          oLis[hanshu].className="active";
+          $("#timeline").show();
+           $("#base").hide();
+           
+
+            
+
+
+          // $("#person").hide();
+          // $("#fee").hide();
+          // $("#file").hide();
+          
+        })
+</script>
 
     <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>

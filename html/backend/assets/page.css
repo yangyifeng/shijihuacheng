@@ -340,14 +340,14 @@ form.order-notify{
 
    /*弹窗界面样式开始*/
 .page-container{
-  width: 50%;
+  width: 500px;
     height: 200px;
     /* min-height: 300px; */
     background-color: #337ab7;
     opacity: 0.9;
     position: absolute;
     top: 100px;
-    left: 30%;
+    left: 40%;
     /* left: 30%; */
     /* z-index: 1; */
     overflow: auto;
@@ -364,13 +364,7 @@ form.order-notify{
     padding-top:50px;
     line-height:19px;
   }
-form{
-   position: relative;
-    width: 90%;
-    margin: 15px auto 0 auto;
-    text-align: center;
-    padding-bottom: 20px;
-  }
+
 #bt{
  bottom: 40px;
     margin-top: 30px;
@@ -390,7 +384,9 @@ form{
   font-weight: bold;
   text-decoration: none;
   line-height: 25px;
+  margin-left: 60px;
 }
+
 
 
 
@@ -451,4 +447,8 @@ form{
 }
 #tab tr td span{
   width: 50px;
+}
+
+.neirongbody{
+  display: none;
 }
