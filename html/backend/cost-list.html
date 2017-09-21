@@ -82,7 +82,7 @@
                 
               </li>
                <li>
-                <a href="cost-add.html">添加物业费记录</a>
+                <a href="cost-add.html">物业费缴纳</a>
               </li>
             </ul>
             <ul class="sub-btns">
@@ -105,7 +105,7 @@
               <!--查询表单-->
               <form method="get">
                 <div class="form-group">
-                  <label>请输入 房间号/业主姓名/电话号码</label>
+                  <label>请输入 单元房号/业主姓名/电话号码</label>
                   <input type="text" class="form-control" name="word" value="" placeholder="">
                   
 
@@ -156,14 +156,14 @@
                   <thead>
                     <tr>
                       
-                      <th>房号</th>
+                      <th>单元房号</th>
                       <th>户型</th>
                       <th>物业费标准</th>
                       <th>业主姓名</th>
                       <th>联系电话</th>
                       <th>缴费金额</th>
                       <th>物业费期限</th>
-                      <th><a href="room-edit.html">操作</a></th>
+                      <th>操作</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -173,33 +173,33 @@
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
-                      <td>2015-2017</td>
-                      <td><a href="room-edit.html">查看详情</td>
+                      <td>￥571.2</td>
+                      <td>2016/01/01-2017/01/01</td>
+                      <td><a href='room-edit.html?process=3'>查看详情</a></td>
           
                     </tr>
                    
                   <tr>
-                      <td>三单元601</td>
+                      <td>三单元602</td>
                       <td>三房两厅（119平米）</td>
                       <td>47.6元/月</td>
-                      <td>张三</td>
+                      <td>李四</td>
                       <td>13333333333</td>
-                      <td>$178</td>
-                      <td>2015-2017</td>
-                      <td><a href="room-edit.html">查看详情</td>
+                      <td>￥571.2</td>
+                       <td>2016/01/01-2017/01/01</td>
+                      <td><a <a href='room-edit.html?process=3'>查看详情</a></td>
           
                     </tr>
 
                    <tr>
-                      <td>三单元601</td>
+                      <td>三单元603</td>
                       <td>三房两厅（119平米）</td>
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
-                      <td>2015-2017</td>
-                      <td><a href="room-edit.html">查看详情</td>
+                     <td>￥571.2</td>
+                       <td>2016/01/01-2017/01/01</td>
+                      <td><a <a href='room-edit.html?process=3'>查看详情</td>
           
                     </tr>
 
@@ -209,9 +209,9 @@
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
-                      <td>2015-2017</td>
-                      <td><a href="room-edit.html">查看详情</td>
+                     <td>￥571.2</td>
+                      <td>2016/01/01-2017/01/01</td>
+                      <td><a <a href='room-edit.html?process=3'>查看详情</td>
           
                     </tr>
                   </tbody>
@@ -264,5 +264,11 @@
 
       });
     </script>
+     <!-- <script type="text/javascript">
+         function ulrHtml(num){
+                     var toUrl = "room-edit.html?"+num;   
+             window.open(toUrl);         
+        }
+</script> -->
   </body>
 </html>

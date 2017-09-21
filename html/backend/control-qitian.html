@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
     <link rel="icon" href="">
 
-    <title>已逾期用户列表 </title>
+    <title>七天内到期用户列表</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -106,7 +106,7 @@
               <!--查询表单-->
               <form method="get">
                 <div class="form-group">
-                  <label>请输入 房间号/业主姓名/电话号码</label>
+                   <label>请输入 单元房号/业主姓名/电话号码</label>
                   <input type="text" class="form-control" name="word" value="" placeholder="">
                   
 
@@ -157,11 +157,10 @@
                   <thead>
                     <tr>
                       
-                      <th>单元号</th>
+                      <th>单元房号</th>
                       <th>物业费标准</th>
                       <th>业主姓名</th>
                       <th>联系电话</th>
-                      <th>物业费</th>
                       <th>到期时间</th>
                       <th>操作</th>
                     </tr>
@@ -172,10 +171,16 @@
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
                       <td>2017/09/20</td>
-                      <td><a onclick="ulrHtml(3)">添加备注</a></td>
-          
+                    <td><a href='room-edit.html?process=2'>添加备注</a></td>
+                    </tr>
+                 <tr>
+                      <td>三单元601</td>
+                      <td>47.6元/月</td>
+                      <td>张三</td>
+                      <td>13333333333</td>
+                      <td>2017/09/20</td>
+                     <td><a href='room-edit.html?process=2'>添加备注</a></td>
                     </tr>
                    
                   <tr>
@@ -183,31 +188,18 @@
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
                       <td>2017/09/20</td>
-                      <td><a onclick="ulrHtml(3)">添加备注</a></td>
+                        <td><a href='room-edit.html?process=2'>添加备注</a></td>
           
                     </tr>
                    
-                    <tr>
+                   <tr>
                       <td>三单元601</td>
                       <td>47.6元/月</td>
                       <td>张三</td>
                       <td>13333333333</td>
-                      <td>$178</td>
                       <td>2017/09/20</td>
-                      <td><a onclick="ulrHtml(3)">添加备注</a></td>
-          
-                    </tr>
-                   
-                    <tr>
-                      <td>三单元601</td>
-                      <td>47.6元/月</td>
-                      <td>张三</td>
-                      <td>13333333333</td>
-                      <td>$178</td>
-                      <td>2017/09/20</td>
-                      <td><a onclick="ulrHtml(3)">添加备注</a></td>
+                       <td><a href='room-edit.html?process=2'>添加备注</a></td>
           
                     </tr>
                    
@@ -242,12 +234,12 @@
           </div>
     </div>
     <!-- /container -->
-    <script type="text/javascript">
+   <!--  <script type="text/javascript">
          function ulrHtml(num){
                      var toUrl = "room-edit.html?"+num;   
              window.open(toUrl);         
         }
-</script>
+</script> -->
 
     <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
