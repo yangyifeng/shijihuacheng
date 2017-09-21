@@ -76,10 +76,10 @@
               <li class='bread'>
                 套房管理:
               </li>
-              <li>
+              <li class='active'>
                 <a href="room-list.html">套房列表</a>
               </li>
-              <li class='active'>
+              <li >
                 <a href="room-add.html">添加套房</a>
               </li>
               <li role="separator" class="divider"></li>
@@ -115,7 +115,7 @@
           <div class="sidebar">
             <h1>返回</h1>
             <!--查询表单-->
-            <p><a href="#">&lt; 查看套房列表</a></p>
+            <p><a href="room-list.html">&lt; 查看套房列表</a></p>
 
           </div>
 
@@ -134,13 +134,12 @@
                   <a href="#file" aria-controls="file" role="tab" data-toggle="tab" >相关文件</a>
                 </li>
                 <li role="presentation">
-                  <a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">时间轴</a>
+                  <a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab" id="time">时间轴</a>
                 </li>
                 <li role="presentation">
-                  <a href="#fee" aria-controls="fee" role="tab" data-toggle="tab">物业费缴费记录</a>
+                  <a href="#fee" aria-controls="fee" role="tab" data-toggle="tab" id="jiaofei">物业费缴费记录</a>
                 </li>
               </ul>
-
               <!-- Tab panes -->
               <div class="tab-content">
                 <!--套房信息-->
@@ -152,7 +151,16 @@
                       <div>
                         <table class="form-table ">
                           <tbody>
-                            <tr>
+                             <tr>
+                                <td class="form-title">
+                                  单元号
+                                </td>
+                                <td>
+                                  洋房二单元
+                                </td>
+                              </tr>
+
+                            <!-- <tr>
                               <td class="form-title">
                                 <span class="text-danger">*</span>单元号
                               </td>
@@ -165,17 +173,26 @@
                                   <option value="5">别墅区二街</option>
                                 </select>
                               </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                               <td class="form-title">
-                                <span class="text-danger">*</span>房号
+                               <!--  <span class="text-danger">*</span> -->房号
                               </td>
                               <td>
-                                <input type="text" class="form-control" name="title" value="" placeholder="">
+                                201
+                                <!-- <input type="text" class="form-control" name="title" value="" placeholder=""> -->
                               </td>
                             </tr>
 
                             <tr>
+                                <td class="form-title">
+                                  户型
+                                </td>
+                                <td>
+                                  三房两厅（119平米）
+                                </td>
+                              </tr>
+                           <!--  <tr>
                               <td class="form-title">
                                 <span class="text-danger">*</span>户型
                               </td>
@@ -186,8 +203,17 @@
                                   <option value="3">四房两厅（139平米）</option>
                                 </select>
                               </td>
-                            </tr>
+                            </tr> -->
+
                             <tr>
+                                <td class="form-title">
+                                  物业费标准
+                                </td>
+                                <td>
+                                  洋房A（0.4元/平米/月）
+                                </td>
+                              </tr>
+                            <!-- <tr>
                               <td class="form-title">
                                 <span class="text-danger">*</span>物业费标准
                               </td>
@@ -199,18 +225,18 @@
                                   <option value="2">独栋别墅（0.7元/平米/月）</option>
                                 </select>
                               </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                               <td class="form-title">物业费用</td>
                               <td>
-                                47.6元/月（选择了「户型」和「物业费标准」，系统会自动计算该楼层的物业费用）
+                                47.6元/月<!-- （选择了「户型」和「物业费标准」，系统会自动计算该楼层的物业费用） -->
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
                       <!--保存按钮-->
-                      <div>
+                     <!--  <div>
                         <table class="table form-table">
                           <tbody>
                             <tr>
@@ -221,10 +247,9 @@
                             </tr>
                           </tbody>
                         </table>
-                      </div>
+                      </div> -->
                   </form>
                 </div>
-
                 <!--业主信息-->
                 <div role="tabpanel" class="tab-pane " id="person" >
                   <br />
@@ -445,7 +470,7 @@
                         <td>现金</td>
                         <td>2016-10-01 至 2017-09-30</td>
                         <td>
-                          <a href="#" class="btn btn-xs btn-primary">
+                          <a href="shouju.html" class="btn btn-xs btn-primary">
                             <span class="glyphicon glyphicon-pencil"></span> 打印收据
                           </a>
                         </td>
@@ -456,7 +481,7 @@
                         <td>微信转账（流水号：001293847567894836）</td>
                         <td>2017-10-01 至 2018-09-30</td>
                         <td>
-                          <a href="#" class="btn btn-xs btn-primary">
+                          <a href="shouju.html" class="btn btn-xs btn-primary">
                             <span class="glyphicon glyphicon-pencil"></span> 打印收据
                           </a>
                         </td>
@@ -471,30 +496,7 @@
         </div>
     </div> 
     <!-- /container -->
-    
-<script type="text/javascript">
-        setTimeout(function(){
-                
-          var location = window.location.href;
-          var zifuchuan= location+"";
-          var shuzu=zifuchuan.split('?');
-          var hanshu=(shuzu[1])*1;
-          
-          var oLis=document.getElementById("ulbody").getElementsByTagName("li");
-          oLis[hanshu].className="active";
-          $("#timeline").show();
-           $("#base").hide();
-           
 
-            
-
-
-          // $("#person").hide();
-          // $("#fee").hide();
-          // $("#file").hide();
-          
-        })
-</script>
 
     <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
@@ -513,5 +515,39 @@
 
       });
     </script>
+  
+   <script type="text/javascript"> 
+    $(function() {
+        　　$.getUrlParam = function(name) {
+        　　　　var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        　　　　var r = window.location.search.substr(1).match(reg);
+        　　　　if(r != null) return unescape(r[2]);
+        　　　　return null;
+        　　}
+        　　var url_status = $.getUrlParam('process');
+        　　if(url_status == 1) {
+        　　　　$('#base').click();
+        　　} else if(url_status == 2) {
+        　　　　$('#time').click();
+        　　} else if(url_status == 3) {
+        　　　　$('#jiaofei').click();
+        　　}
+        });
+</script>
+<!-- <script> 
+      $(function () { 
+
+          $('#ulbody li:eq(3) a').tab('show'); //初始化显示第三个tab 
+          $('#ulbody a:last').tab('show');//初始化显示最后一个tab 
+        $('#ulbody a').click(function (e) { 
+          e.preventDefault();//阻止a链接的跳转行为 
+          $(this).tab('show');//显示当前选中的链接及关联的content 
+        }) 
+      }) 
+    </script> -->
+
+    
+
+    
   </body>
 </html>
