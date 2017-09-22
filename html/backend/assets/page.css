@@ -339,17 +339,14 @@ form.order-notify{
   /*缴费页面*/
 
    /*弹窗界面样式开始*/
-.page-container{
+/*.page-container{
   width: 500px;
     height: 200px;
-    /* min-height: 300px; */
     background-color: #337ab7;
     opacity: 0.9;
     position: absolute;
     top: 100px;
     left: 40%;
-    /* left: 30%; */
-    /* z-index: 1; */
     overflow: auto;
     border-radius: 5px;
   }
@@ -363,12 +360,12 @@ form.order-notify{
     letter-spacing: 1px;
     padding-top:50px;
     line-height:19px;
-  }
+  }*/
 
-#bt{
+/*#bt{
  bottom: 40px;
     margin-top: 30px;
-    /* padding-top: 100px; */
+    
     left: 10px;
     background: #fff;
     width: 30%;
@@ -385,7 +382,7 @@ form.order-notify{
   text-decoration: none;
   line-height: 25px;
   margin-left: 60px;
-}
+}*/
 
 
 
