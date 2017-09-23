@@ -17,7 +17,10 @@
 
     <link href="./assets/vendors/distpicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
     <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
-    <link href="./assets/page.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/vendors/webuploader/webuploader.css" />
+    <link rel="stylesheet" type="text/css" href="assets/page.css" />
+    
 
     
     <!-- Custom styles for this template -->
@@ -218,55 +221,37 @@
                         <input type="text" class="form-control" name="title" value="" placeholder="">
                       </td>
                     </tr>
-                    <tr>
+                    <tr style="height: 100px;">
                         <td class="form-title">
                            上传文件
                         </td>
-                        <td>
-                            <input type="file" id="exampleInputFile">
+                        <td >
+                           <div id="wrapper" >
+                              <div id="container" >
+                                  <!--头部，相册选择和格式选择-->
+                                  <div id="uploader" >
+                                      <div class="queueList" >
+                                          <div id="dndArea" class="placeholder" >
+                                              <div id="filePicker" ></div>
+                                          </div>
+                                      </div>
+                                      <div class="statusBar" style="display:none;">
+                                          <div class="progress" ">
+                                              <span class="text" >0%</span>
+                                              <span class="percentage" ></span>
+                                          </div><div class="info" ></div>
+                                          <div class="btns" >
+                                              <div id="filePicker2" ></div><div class="uploadBtn" >开始上传</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                           <!--  <input type="file" id="exampleInputFile"> -->
                         </td>
                     </tr>
-                    <tr>
-                      <td class="form-title">
-                      </td>
-                      <td> <button type="button" class="btn btn-primary btn-sm">上传</button> </td>
-                    </tr>
-              <!--保存按钮-->
-              <div>
-                 <table class="table form-table">
-                  <h5>已上传文件</h5>
-                   <tr>
-                      <td >文件名</td>
-                      <td>上传时间</td>
-                      <td>
-                        操作
-                      </td>
-                    </tr>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">房产证.jpg</a></td>
-                        <td>2017/09/21 16:14</td>
-                        <td>
-                          <a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span>删除</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">不动产证.jpg</a></td>
-                      
-                        <td>2017/09/21 16:14</td>
-                        <td>
-                          <a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span>删除</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">收据.jpg</a></td>
-                       <td>2017/09/21 16:14</td>
-                        <td>
-                          <a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span>删除</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                   
                 <table class="table form-table">
                   <tbody>
                     <tr>
@@ -277,13 +262,21 @@
                     </tr>
                   </tbody>
                 </table>
-              </div>
+              </div> 
 
             </form>
           </div>
         </div>
     </div> 
     <!-- /container -->
+   <!-- <script src="./assets/vendors/jquery-1.10.2.min.js"></script> -->
+   <script src="assets/vendors/webuploader/jquery.js"></script>
+    <script src="assets/vendors/webuploader/webuploader.js"></script>
+    <script src="assets/vendors/webuploader//upload.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
 
     <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
@@ -302,5 +295,10 @@
 
       });
     </script>
+
+
+
+    
+    
   </body>
 </html>
