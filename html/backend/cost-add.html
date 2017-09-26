@@ -48,9 +48,9 @@
         <div class="navbar-collapse collapse">
           <!--头部菜单-->
           <ul class="nav navbar-nav">
-            <li><a href="control-yuqi.html">控制面板</a></li>
+            <li><a href="control-yuqi.html">欠费管理</a></li>
             <li  ><a href="room-list.html">套房管理</a></li>
-            <li class="active"><a href="cost-list.html">收费管理</a></li>
+            <li class="active"><a href="cost-add.html">收费管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -76,12 +76,11 @@
               <li class='bread'>
                 物业费管理:
               </li>
-             <li >
-                <a href="cost-list.html">物业费收费记录列表</a>
-                
-              </li>
-               <li class='active'>
+              <li class='active'>
                 <a href="cost-add.html">物业费缴纳</a>
+              </li>
+              <li >
+                <a href="cost-list.html">物业费收费记录列表</a>  
               </li>
              
             </ul>
@@ -94,7 +93,7 @@
 
           <!--页面左侧-->
           <div class="sidebar">
-            <h1>返回</h1>
+            <h1>查看</h1>
             <!--查询表单-->
             <p><a href="cost-list.html">&lt; 物业费收费记录列表</a></p>
 
@@ -140,15 +139,15 @@
                             
                             <tr>
                               <td class="form-title">
-                                <span class="text-danger">*</span>单元号
+                                <span class="text-danger">*</span>楼栋号
                               </td>
                               <td>
                                 <select class="form-control chosen" name="status">
-                                  <option value="1">洋房一单元</option>
-                                  <option value="2">洋房二单元</option>
-                                  <option value="3">洋房三单元</option>
-                                  <option value="4">别墅区一街</option>
-                                  <option value="5">别墅区二街</option>
+                                  <option value="1">一栋</option>
+                                  <option value="2">二栋</option>
+                                  <option value="3">三栋</option>
+                                  <option value="4">四栋</option>
+                                  <option value="5">五栋</option>
                                 </select>
                               </td>
                             </tr>
@@ -156,7 +155,7 @@
 
                             <tr>
                               <td class="form-title">
-                                <span class="text-danger">*</span>房号
+                                <span class="text-danger">*</span>单元房号
                               </td>
                               <td>
                                 <input type="text" class="form-control" name="title" value="" placeholder="">

@@ -10,17 +10,14 @@
     <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
     <link rel="icon" href="">
 
-    <title>添加楼盘 </title>
+    <title>添加楼栋 </title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <link href="./assets/vendors/distpicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
     <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="assets/vendors/webuploader/webuploader.css" />
-    <link rel="stylesheet" type="text/css" href="assets/page.css" />
-    
+    <link href="./assets/page.css" rel="stylesheet">
 
     
     <!-- Custom styles for this template -->
@@ -83,21 +80,21 @@
               <li>
                 <a href="room-list.html">套房列表</a>
               </li>
-              <li class='active'>
+              <li>
                 <a href="room-add.html">添加套房</a>
               </li>
               <li role="separator" class="divider"></li>
-              <li >
+              <li>
                 <a href="house-list.html">楼栋列表</a>
               </li>
-              <li >
+              <li class='active'>
                 <a href="house-add.html">添加楼栋</a>
               </li>
               <li role="separator" class="divider"></li>
               <li>
                 <a href="building-list.html">单元列表</a>
               </li>
-              <li>
+              <li >
                 <a href="building-add.html">添加单元</a>
               </li>
               <li role="separator" class="divider"></li>
@@ -126,21 +123,20 @@
           <div class="sidebar">
             <h1>返回</h1>
             <!--查询表单-->
-            <p><a href="room-list.html
-              ">&lt; 查看套房列表</a></p>
+            <p><a href="room-list.html">&lt; 查看套房列表</a></p>
 
           </div>
 
           <!--页面右侧-->
           <div class="main">
 
-            <form class="form-horizontal" enctype="multipart/form-data" action="3" method="post">
+            <form class="form-horizontal" enctype="multipart/form-data"  action="#/backend/admin/product" method="post">
               <input type="hidden" name="_token" value="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
               <input type="hidden" name="id" value="0"/>
 
               <div>
                 <h5>
-                  套房信息
+                  楼栋信息
                   <span class="pagination-total pull-right">
                     带 <span class="text-danger">*</span> 为必填项
                   </span>
@@ -153,22 +149,7 @@
                   <tbody>
                     <tr>
                       <td class="form-title">
-                        <span class="text-danger">*</span>楼栋号
-                      </td>
-                      <td>
-                        <select class="form-control chosen" name="status">
-                          <option value="1">一栋</option>
-                          <option value="2">二栋</option>
-                          <option value="3">三栋</option>
-                          <option value="4">四栋</option>
-                          <option value="5">五栋</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="form-title">
-                        <span class="text-danger">*</span>单元房号
+                        <span class="text-danger">*</span>楼栋名称
                       </td>
                       <td>
                         <input type="text" class="form-control" name="title" value="" placeholder="">
@@ -177,88 +158,19 @@
 
                     <tr>
                       <td class="form-title">
-                        <span class="text-danger">*</span>户型
+                        备注
                       </td>
                       <td>
-                        <select class="form-control chosen" name="status">
-                          <option value="1">三房两厅（119平米）</option>
-                          <option value="2">两房两厅（89平米）</option>
-                          <option value="3">四房两厅（139平米）</option>
-                        </select>
+                        <textarea class="form-control" name="title"></textarea>
                       </td>
                     </tr>
 
-                    <tr>
-                      <td class="form-title">
-                        <span class="text-danger">*</span>物业费标准
-                      </td>
-                      <td>
-                        <select class="form-control chosen" name="status">
-                          <option value="1">洋房A（0.4元/平米/年）</option>
-                          <option value="1">洋房B（0.5元/平米/年）</option>
-                          <option value="2">联排别墅（0.6元/平米/年）</option>
-                          <option value="2">独栋别墅（0.7元/平米/年）</option>
-                        </select>
-                      </td>
-                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-                    <tr>
-                      <td class="form-title">物业费用</td>
-                      <td>
-                        47.6元/年（选择了「户型」和「物业费标准」，系统会自动计算该楼层的物业费用）
-                      </td>
-                    </tr>
-
-
-                      <tr>
-                      <td class="form-title">
-                        户主姓名
-                      </td>
-                      <td>
-                        <input type="text" class="form-control" name="title" value="" placeholder="">
-                      </td>
-                    </tr>
-
-
-                     <tr>
-                      <td class="form-title">
-                        联系方式
-                      </td>
-                      <td>
-                        <input type="text" class="form-control" name="title" value="" placeholder="">
-                      </td>
-                    </tr>
-                    <tr style="height: 100px;">
-                        <td class="form-title">
-                           上传文件
-                        </td>
-                        <td >
-                           <div id="wrapper" >
-                              <div id="container" >
-                                  <!--头部，相册选择和格式选择-->
-                                  <div id="uploader" >
-                                      <div class="queueList" >
-                                          <div id="dndArea" class="placeholder" >
-                                              <div id="filePicker" ></div>
-                                          </div>
-                                      </div>
-                                      <div class="statusBar" style="display:none;">
-                                          <div class="progress" ">
-                                              <span class="text" >0%</span>
-                                              <span class="percentage" ></span>
-                                          </div><div class="info" ></div>
-                                          <div class="btns" >
-                                              <div id="filePicker2" ></div><div class="uploadBtn" >开始上传</div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                           <!--  <input type="file" id="exampleInputFile"> -->
-                        </td>
-                    </tr>
-                   
+              <!--保存按钮-->
+              <div>
                 <table class="table form-table">
                   <tbody>
                     <tr>
@@ -269,21 +181,13 @@
                     </tr>
                   </tbody>
                 </table>
-              </div> 
+              </div>
 
             </form>
           </div>
         </div>
     </div> 
     <!-- /container -->
-   <!-- <script src="./assets/vendors/jquery-1.10.2.min.js"></script> -->
-   <script src="assets/vendors/webuploader/jquery.js"></script>
-    <script src="assets/vendors/webuploader/webuploader.js"></script>
-    <script src="assets/vendors/webuploader//upload.js"></script>
-    <script type="text/javascript">
-
-    </script>
-
 
     <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
@@ -302,10 +206,5 @@
 
       });
     </script>
-
-
-
-    
-    
   </body>
 </html>
