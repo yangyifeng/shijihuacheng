@@ -50,9 +50,9 @@
         <div class="navbar-collapse collapse">
           <!--头部菜单-->
           <ul class="nav navbar-nav">
-            <li class="active" ><a href="control-yuqi.html">控制面板</a></li>
+            <li class="active" ><a href="control-yuqi.html">欠费管理</a></li>
             <li ><a href="room-list.html">套房管理</a></li>
-            <li ><a href="cost-list.html">收费管理</a></li>
+              <li><a href="cost-add.html">收费管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -106,11 +106,18 @@
               <!--查询表单-->
               <form method="get">
                 <div class="form-group">
+                    <label>请选择楼栋</label>
+                        <select class="form-control chosen" name="status">
+                          <option value="1">一栋</option>
+                          <option value="2">二栋</option>
+                          <option value="3">三栋</option>
+                        </select>
+                  </div>
+                <div class="form-group">
                    <label>请输入 单元房号/业主姓名/电话号码</label>
-                  <input type="text" class="form-control" name="word" value="" placeholder="">
-                  
-
+                  <input type="text" class="form-control" name="word" value="" placeholder="">   
                 </div>
+
                 <!--div class="form-group">
                   <label>注册时间</label>
                   <div class="input-group">
@@ -156,7 +163,7 @@
                 <table class="table table-striped table-hover">
                   <thead>
                     <tr>
-                      
+                      <th>楼栋号</th>
                       <th>单元房号</th>
                       <th>物业费</th>
                       <th>业主姓名</th>
@@ -167,6 +174,7 @@
                   </thead>
                   <tbody>
                     <tr>
+                      <td>四栋</td>
                       <td>三单元501</td>
                       <td>35.6元/年</td>
                       <td>李四</td>
@@ -174,7 +182,8 @@
                       <td>2017/09/20</td>
                     <td><a href='room-edit.html?process=2'>添加备注</a></td>
                     </tr>
-                 <tr>
+                    <tr>
+                      <td>五栋</td>
                       <td>三单元502</td>
                       <td>47.6元/年</td>
                       <td>王茜</td>
@@ -184,6 +193,7 @@
                     </tr>
                    
                   <tr>
+                      <td>六栋</td>
                       <td>三单元503</td>
                       <td>47.6元/年</td>
                       <td>王五</td>
@@ -194,6 +204,7 @@
                     </tr>
                    
                    <tr>
+                      <td>七栋</td>
                       <td>三单元504</td>
                       <td>55.6元/年</td>
                       <td>王宇</td>
