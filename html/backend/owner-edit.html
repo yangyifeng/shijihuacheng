@@ -49,8 +49,9 @@
           <!--头部菜单-->
           <ul class="nav navbar-nav">
             <li><a href="control-yuqi.html">欠费管理</a></li>
-            <li class="active" ><a href="room-list.html">套房管理</a></li>
-            <li><a href="cost-add.html">收费管理</a></li>
+            <li ><a href="room-list.html">套房管理</a></li>
+            <li><a href="cost-add.html">物业费缴纳管理</a></li>
+             <li  class="active"><a href="owner-list.html">业主管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -74,35 +75,14 @@
           <div class="navbar-collapse collapse">
             <ul class="sub-list">
               <li class='bread'>
-                套房管理:
+                业主管理:
               </li>
               <li class='active'>
-                <a href="room-list.html">套房列表</a>
-              </li>
-              <li >
-                <a href="room-add.html">添加套房</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="building-list.html">单元列表</a>
+                <a href="owner-list.html">业主列表</a>
               </li>
               <li>
-                <a href="building-add.html">添加单元</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="type-list.html">户型列表</a>
-              </li>
-              <li>
-                <a href="type-add.html">添加户型</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="fee-list.html">物业费标准列表</a>
-              </li>
-              <li>
-                <a href="fee-add.html">物业费标准管理</a>
-              </li>
+                <a href="owner-add.html">添加业主</a>
+              </li> 
             </ul>
           </div>
         </nav>
@@ -115,7 +95,7 @@
           <div class="sidebar">
             <h1>返回</h1>
             <!--查询表单-->
-            <p><a href="room-list.html">&lt; 查看套房列表</a></p>
+            <p><a href="owner-list.html">&lt; 查看业主列表</a></p>
 
           </div>
 
@@ -125,10 +105,10 @@
             <div>
               <ul class="nav nav-tabs" role="tablist" id="ulbody">
                 <li role="presentation" class="active">
-                  <a href="#base" aria-controls="base" role="tab" data-toggle="tab" >套房信息</a>
+                  <a href="#base" aria-controls="base" role="tab" data-toggle="tab" >套房信息更改</a>
                 </li>
                 <li role="presentation">
-                  <a href="#person" aria-controls="person" role="tab" data-toggle="tab" >业主信息</a>
+                  <a href="#person" aria-controls="person" role="tab" data-toggle="tab" >业主信息更改</a>
                 </li>
                 <li role="presentation">
                   <a href="#file" aria-controls="file" role="tab" data-toggle="tab" >相关文件</a>
@@ -151,7 +131,20 @@
                       <div>
                         <table class="form-table ">
                           <tbody>
-                          
+                             <tr>
+                              <td class="form-title">
+                                <span class="text-danger">*</span>楼栋号
+                              </td>
+                              <td>
+                                <select class="form-control chosen" name="status">
+                                  <option value="1">一栋</option>
+                                  <option value="2">二栋</option>
+                                  <option value="3">三栋</option>
+                                  <option value="4">四栋</option>
+                                  <option value="5">五栋</option>
+                                </select>
+                              </td>
+                            </tr> 
 
                             <tr>
                               <td class="form-title">
@@ -210,6 +203,7 @@
                                 47.6元/月（选择了「户型」和「物业费标准」，系统会自动计算该楼层的物业费用） 
                               </td>
                             </tr>
+                            
                           </tbody>
                         </table>
                       </div>

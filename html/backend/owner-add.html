@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
     <link rel="icon" href="">
 
-    <title>添加楼盘 </title>
+    <title>添加业主 </title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/vendors/webuploader/webuploader.css" />
     <link rel="stylesheet" type="text/css" href="assets/page.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/vendors/star/star-rating.css">
     
 
     
@@ -53,9 +54,9 @@
           <!--头部菜单-->
           <ul class="nav navbar-nav">
             <li><a href="control-yuqi.html">欠费管理</a></li>
-            <li class="active" ><a href="room-list.html">套房管理</a></li>
+            <li  ><a href="room-list.html">套房管理</a></li>
             <li><a href="cost-add.html">物业费缴纳管理</a></li>
-             <li ><a href="owner-list.html">业主管理</a></li>
+             <li class="active"><a href="owner-list.html">业主管理</a></li>
           </ul>
           <!-- #头部菜单-->
           <ul class="nav navbar-nav navbar-right">
@@ -79,42 +80,14 @@
           <div class="navbar-collapse collapse">
             <ul class="sub-list">
               <li class='bread'>
-                套房管理:
+                业主管理:
               </li>
-              <li>
-                <a href="room-list.html">套房列表</a>
+              <li >
+                <a href="owner-list.html">业主列表</a>
               </li>
               <li class='active'>
-                <a href="room-add.html">添加套房</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li >
-                <a href="house-list.html">楼栋列表</a>
-              </li>
-              <li >
-                <a href="house-add.html">添加楼栋</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="building-list.html">单元列表</a>
-              </li>
-              <li>
-                <a href="building-add.html">添加单元</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="type-list.html">户型列表</a>
-              </li>
-              <li>
-                <a href="type-add.html">添加户型</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="fee-list.html">物业费标准列表</a>
-              </li>
-              <li>
-                <a href="fee-add.html">物业费标准管理</a>
-              </li>
+                <a href="owner-add.html">业主入住</a>
+              </li> 
             </ul>
           </div>
         </nav>
@@ -127,8 +100,8 @@
           <div class="sidebar">
             <h1>返回</h1>
             <!--查询表单-->
-            <p><a href="room-list.html
-              ">&lt; 查看套房列表</a></p>
+            <p><a href="owner-list.html
+              ">&lt; 查看业主列表</a></p>
 
           </div>
 
@@ -141,7 +114,7 @@
 
               <div>
                 <h5>
-                  套房信息
+                  业主信息
                   <span class="pagination-total pull-right">
                     带 <span class="text-danger">*</span> 为必填项
                   </span>
@@ -212,7 +185,7 @@
 
 
                       <tr>
-                      <td class="form-title">
+                      <td class="form-title"><span class="text-danger">*</span>
                         户主姓名
                       </td>
                       <td>
@@ -222,13 +195,23 @@
 
 
                      <tr>
-                      <td class="form-title">
+                      <td class="form-title"><span class="text-danger">*</span>
                         联系方式
                       </td>
                       <td>
                         <input type="text" class="form-control" name="title" value="" placeholder="">
                       </td>
                     </tr>
+                    <tr>
+                              <td class="form-title">
+                                <span class="text-danger">*</span>星级
+                              </td>
+                              <td>
+                                <input id="comment" name="comment" class="rating"  min="0" max="5" step="1" data-size="xss" value="2" >
+                                  
+                                </select>
+                              </td>
+                            </tr> 
                     <tr style="height: 100px;">
                         <td class="form-title">
                            上传文件
@@ -304,7 +287,12 @@
       });
     </script>
 
-
+ <script src="./assets/vendors/star/star-rating.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $("#comment").rating();           
+            });
+        </script>
 
     
     
