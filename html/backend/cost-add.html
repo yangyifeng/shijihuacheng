@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="17nb09nROctqttKz9hcPg4gxNB0wCU8B21t744md">
     <link rel="icon" href="">
 
-    <title>物业费缴纳</title>
+    <title>收费管理 </title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,7 @@
     <link href="./assets/vendors/chosen/chosen.min.css" rel="stylesheet">
     <link href="./assets/page.css" rel="stylesheet">
 
+    
     <!-- Custom styles for this template -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,7 +38,7 @@
     <![endif]-->
 
     <!--头部主标题导航-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top ab">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#/backend/">
@@ -49,9 +50,8 @@
           <!--头部菜单-->
           <ul class="nav navbar-nav">
            <li><a href="control-data.html">欠费管理</a></li>
-            <li  ><a href="room-list.html">套房管理</a></li>
-            <li class="active"><a href="cost-add.html">收费管理</a>
-            </li>
+            <li ><a href="room-list.html">套房管理</a></li>
+            <li class="active" ><a href="cost-list.html">收费管理</a></li>
              <li ><a href="owner-list.html">业主管理</a></li>
           </ul>
           <!-- #头部菜单-->
@@ -67,75 +67,84 @@
         </div>
       </div>
     </nav>
-
-    <!-- #头部主标题导航--> 
-    <div class="list-container have-subhead">
-          
+    <!-- #头部主标题导航-->    
+        
+   <!--  <div class="list-container have-subhead"> -->
+      
         <!--头部副标题导航-->
-        <nav class="navbar navbar-fixed-top subhead">
+        <nav class="navbar navbar-fixed-top subhead ab">
           <div class="navbar-collapse collapse">
             <ul class="sub-list">
               <li class='bread'>
-                物业费管理:
+                收费管理:
+              </li>
+              
+              <li >
+                <a href="cost-list.html">物业费账单</a>  
               </li>
               <li class='active'>
-                <a href="cost-add.html">物业费缴纳</a>
+                <a href="cost-add.html">收取物业费</a>  
               </li>
-              <li >
-                <a href="cost-list.html">物业费收费记录列表</a>  
+            </ul>
+            <ul class="sub-btns">
+              <li>
+                <a href="#" class="btn btn-sm btn-default">
+                  <span class="glyphicon glyphicon-list-alt"></span>
+                  导出 excel 表
+                </a>
               </li>
-             
             </ul>
           </div>
         </nav>
-        <!-- #头部副标题导航-->    
-
+        <!-- #头部副标题导航-->  
         <!--页面主体-->
-        <div class="list-container have-subhead">
+          <div  class="list-container have-subhead ab">
 
-          <!--页面左侧-->
-          <div class="sidebar">
-            <h1>查看</h1>
-            <!--查询表单-->
-            <p><a href="cost-list.html">&lt; 物业费收费记录列表</a></p>
+            <!--页面左侧-->
+            <div class="sidebar">
+              <h1>按条件查询</h1>
+              <!--查询表单-->
+              <form method="get">
+                <div class="form-group">
+                    <label>请选择楼栋</label>
+                        <select class="form-control chosen" name="status">
+                          <option value="1">一栋</option>
+                          <option value="2">二栋</option>
+                          <option value="3">三栋</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                  <label>请输入 单元房号/业主姓名/电话号码</label>
+                  <input type="text" class="form-control" name="word" value="" placeholder="">
+                  
 
-          </div>
+                </div>
+               
+                <div class="form-group-btns">
+                  <button type="submit" class="btn btn-sm btn-primary">查询</button>
+                  <a href="#" class="btn btn-sm btn-default">重置</a>
+                </div>
+              </form>
 
-          <!--页面右侧-->
-          <div class="main">
+            </div>
 
-            <div>
-             <!--  <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
-                  <a href="#base" aria-controls="base" role="tab" data-toggle="tab">套房信息</a>
-                </li>
-                <li role="presentation">
-                  <a href="#person" aria-controls="person" role="tab" data-toggle="tab">业主信息</a>
-                </li>
-                <li role="presentation">
-                  <a href="#file" aria-controls="file" role="tab" data-toggle="tab">相关文件</a>
-                </li>
-                <li role="presentation">
-                  <a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">时间轴</a>
-                </li>
-                <li role="presentation">
-                  <a href="#fee" aria-controls="fee" role="tab" data-toggle="tab">物业费缴费记录</a>
-                </li>
-              </ul> -->
+            <!--页面右侧-->
+            <div class="main">
 
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <!--套房信息-->
-               <!--列表头部-->
+              <!--列表头部-->
               <div>
                 <h5>
-                  物业费账单
-                  <span class="pagination-total pull-right">
-                    带 <span class="text-danger">*</span> 为必填项
-                  </span>
+                  <!--列表的标题-->
+                  应交的物业费明细
+                  <!--迷你页码-->
+                  
                 </h5>
               </div>
               <!-- #列表头部-->
+
+              <!--列表-->
+              <div>
+               <!-- #列表头部-->
                         <table class="form-table">
                           <tbody>
                             
@@ -171,18 +180,30 @@
                                   三房两厅（119平米）
                                 </td>
                               </tr>
-
-                            
-
                             <tr>
                               <td class="form-title">
                                物业费标准
                               </td>
                               <td>
-                                洋房A（0.4元/平米/年）
+                                47.6元/年
                               </td>
                             </tr>
-
+                             <tr>
+                              <td class="form-title">
+                               往年欠费
+                              </td>
+                              <td>
+                                ￥0
+                              </td>
+                            </tr>
+                             <tr>
+                              <td class="form-title">
+                               滞纳金
+                              </td>
+                              <td>
+                               ￥0
+                              </td>
+                            </tr>
                             <tr>
                               <td class="form-title">
                                 <span class="text-danger">*</span>缴费周期
@@ -199,9 +220,9 @@
                             </tr>
 
                             <tr>
-                              <td class="form-title">物业费用</td>
+                              <td class="form-title">合计应交金额</td>
                               <td>
-                                47.6元/年（选择了「户型」和「物业费标准」和「缴费周期」，系统会自动计算该楼层的物业费用）
+                                47.6元/年（[往年欠费]+[滞纳金]+[物业费标准]*「缴费周期」，系统会自动计算该楼层的物业费用）
                               </td>
                             </tr>
 
@@ -230,36 +251,14 @@
                           </tbody>
                         </table>
                       </div>
-                      <!--保存按钮-->
-                      <div>
-                        <!-- <table class="table form-table">
-                          <tbody>
-                            <tr>
-                              <td class="form-title"></td>
-                              <td>
-                               <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"> <button type="submit"  class="btn btn-primary btn-lg btn-block">确定</button> </a>
-                               <div id="fade" class="black_overlay"></div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table> -->
-
-                        <!--弹窗界面开始-->
-                         <!--  <div id="light" class="page-container" style="display: none;">
-                              <p style="text-align: center; z-index: 1000">缴费成功</p>
-                             
-                           <span> <a href="cost-list.html" button  type="submit" id="bt" class="btn" style="z-index: 1001;"> 返回</a></span>
-                            <span><a href="shouju.html" button type="submit" id="bt" class="btn" style="z-index: 1001"> 打印收据 </a></span>
-                          </div> -->
-                          <!--弹窗界面结束-->
-                      </div>
-                  </form>
+                       </form>
                   <table class="table form-table">
                           <tbody>
                             <tr>
-                              <td class="form-title"></td>
-                              <td>
-                               <a href='owner-edit.html?process=3'> <button type="submit"  class="btn btn-primary btn-lg btn-block">确定</button> </a>
+                              
+                              <td align="center">
+                               <a href='cost-fee-list.html'> <button type="submit"  class="btn btn-primary btn-lg ">收款</button> </a>
+                               <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
                                <div id="fade" ></div>
 
 
@@ -267,25 +266,39 @@
                             </tr>
                           </tbody>
                         </table>
-                </div>
               </div>
+              <!-- #列表-->
+
+              
+              
             </div>
           </div>
-        </div>
-    </div> 
+    </div>
     <!-- /container -->
 
+    <script src="./assets/vendors/jquery-1.11.1.min.js"></script>
+    <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendors/distpicker/bootstrap-datepicker.min.js"></script>
+    <script src="./assets/vendors/distpicker/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="./assets/vendors/chosen/chosen.jquery.min.js"></script>
+    <script src="./assets/vendors/lodash.min.js"></script>
+    <script src="./assets/vendors/jquery.confirm.min.js"></script>
+    <script src="./assets/yoozi.js"></script>
+    <script src="./assets/common.js"></script>
 
- 
+    <script type="text/javascript">
+      $(document).ready(function(){
 
+        //日期选择
+        yoozi.datapicker('.datepicker');
 
-
-
-    
-   <!--  <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script> -->
-   <!--  <script src="./assets/vendors/distpicker/bootstrap-datepicker.min.js"></script> -->
-  <!--  <script src="./assets/vendors/distpicker/bootstrap-datepicker.zh-CN.min.js"></script>
-   -->
-    
+      });
+    </script>
+     <!-- <script type="text/javascript">
+         function ulrHtml(num){
+                     var toUrl = "room-edit.html?"+num;   
+             window.open(toUrl);         
+        }
+</script> -->
   </body>
 </html>

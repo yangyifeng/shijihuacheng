@@ -80,7 +80,10 @@
               </li>
               
               <li class='active'>
-                <a href="cost-list.html">物业费缴纳</a>  
+                <a href="cost-list.html">物业费账单</a>  
+              </li>
+              <li >
+                <a href="cost-add.html">收取物业费</a>  
               </li>
             </ul>
             <ul class="sub-btns">
@@ -99,7 +102,7 @@
 
             <!--页面左侧-->
             <div class="sidebar">
-              <h1>按条件筛选</h1>
+              <h1>按条件查询</h1>
               <!--查询表单-->
               <form method="get">
                 <div class="form-group">
@@ -116,14 +119,14 @@
                   
 
                 </div>
-                <!--div class="form-group">
-                  <label>注册时间</label>
+                 <div class="form-group">
+                  <label>费用起期</label>
                   <div class="input-group">
                     <input type="text" class="form-control datepicker" name="date[from]" value="" placeholder="0000-00-00">
                     <span class="input-group-addon">至</span>
                     <input type="text" class="form-control datepicker" name="date[to]" value="" placeholder="0000-00-00">
                   </div>
-                </div-->
+                </div>
                 <div class="form-group-btns">
                   <button type="submit" class="btn btn-sm btn-primary">筛选</button>
                   <a href="#" class="btn btn-sm btn-default">重置</a>
@@ -163,13 +166,13 @@
                     <tr>
                       <th>楼栋号</th>
                       <th>单元房号</th>
-                      <th>户型</th>
                       <th>业主姓名</th>
-                      <th>联系电话</th>
+                      <th>物业费缴纳时间</th>
+                      <th>物业费到期时间</th>
+                      <th>往年欠费</th>
+                      <th>滞纳金</th>
                       <th>物业费标准</th>
-                      
-                      <th>缴费金额</th>
-                      <th>物业费期限</th>
+                      <th>应付总计</th>
                       <th>操作</th>
                     </tr>
                   </thead>
@@ -177,353 +180,71 @@
                     <tr>
                       <td>一栋</td>
                       <td>三单元401</td>
-                      <td>三房两厅（119平米）</td>
                       <td>张三</td>
-                      <td>13333333333</td>
+                      <td>2016/01/01</td>
+                      <td>2017/12/31</td>
+                      <td>￥0</td>
+                      <td>￥0</td>
                       <td>47.6元/年</td>
-                      
-                      <td>￥47.6</td>
-                      <td>2016/01/01-2017/12/31</td>
+                      <td class="color">￥47.6(往年欠费+滞纳金+物业标准)</td>
+                     
                         <td><!-- 添加备注按钮 -->
-                          <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs"><span class="glyphicon glyphicon-arrow-right"></span>查看更多</button></a>
+                          
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                                   <span class="glyphicon glyphicon-yen"></span>
                                   物业费缴纳
                             </button>
+                            <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                          缴费记录</button></a>
 
-                           <!-- 添加备注弹出框 -->
-                              <div style="z-index: 9999"  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                  <div  class="modal-dialog" role="document" >
-                                     <div  class="modal-content"  >
-                                         <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <!-- <h4 class="modal-title" id="myModalLabel">修改记录列表</h4> -->
-                                               <div>
-                <h3 style="text-align:center">
-                  物业费账单
-                  
-                </h3>
-              </div>
-              <!-- #列表头部-->
-                        <table class="form-table">
-                          <tbody>
-                            
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>楼栋号
-                              </td>
-                              <td>一栋</td>
-                            </tr>
-
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>单元房号
-                              </td>
-                              <td>三单元401</td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">
-                                户主姓名
-                              </td>
-                              <td>
-                                张三
-                              </td>
-                            </tr>
-
-                             <tr>
-                                <td class="form-title">
-                                  户型
-                                </td>
-                                <td>
-                                  三房两厅（119平米）
-                                </td>
-                              </tr>
-
-                            
-
-                            <tr>
-                              <td class="form-title">
-                               物业费标准
-                              </td>
-                              <td>
-                                47.6元/年
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               往年欠费
-                              </td>
-                              <td>
-                                ￥0
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               滞纳金
-                              </td>
-                              <td>
-                               ￥0
-                              </td>
-                            </tr>
-
-
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴费周期
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">一年</option>
-                                  <option value="2">两年</option>
-                                  <option value="3">三年</option>
-                                  <option value="4">四年</option>
-                                  <option value="5">五年</option>
-                                </select>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">合计应交金额</td>
-                              <td>
-                                47.6元/年（[往年欠费]+[滞纳金]+[物业费标准]*「缴费周期」，系统会自动计算该楼层的物业费用）
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴纳方式
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">现金</option>
-                                  <option value="1">支付宝</option>
-                                  <option value="2">微信</option>
-                                  <option value="2">银行卡</option>
-                                 
-                                </select>
-                              </td>
-                            </tr>
-                            <tr>
-                                <td class="form-title">
-                                  收款说明
-                                </td>
-                                <td>
-                                  <textarea class="form-control" name="title"></textarea>
-                                </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                       </form>
-                  <table class="table form-table">
-                          <tbody>
-                            <tr>
-                              
-                              <td align="center">
-                               <a href='cost-fee-list.html'> <button type="submit"  class="btn btn-primary btn-lg ">确认</button> </a>
-                               <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
-                               <div id="fade" ></div>
-
-
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                                           </div>
-
-                                      </div>
-                                   </div>
-                              </div>
+                          
                       </td>
           
                     </tr>
                    
                   <tr>
-                      <td>二栋</td>
-                      <td>三单元402</td>
-                      <td>两房两厅（89平米）</td>
-                      <td>李四</td>
-                      <td>13333333333</td>
+                      <td>一栋</td>
+                      <td>三单元401</td>
+                      <td>张三</td>
+                      <td>2016/01/01</td>
+                      <td>2017/12/31</td>
+                      <td>￥0</td>
+                      <td>￥0</td>
                       <td>35.6元/年</td>
-                      
-                      <td>￥35.6</td>
-                       <td>2016/01/01-2017/12/31</td>
+                      <td class="color">￥35.6(往年欠费+滞纳金+物业标准)</td>
                       <td><!-- 添加备注按钮 -->
-                            <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs"><span class="glyphicon glyphicon-arrow-right"></span>查看更多</button></a>
+                            
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                                   <span class="glyphicon glyphicon-yen"></span>
                                   物业费缴纳
                             </button>
+                            <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs"><span class="glyphicon glyphicon-list-alt"></span>
+                            缴费记录</button></a>
 
-                           <!-- 添加备注弹出框 -->
-                              <div style="z-index: 9999"  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                  <div  class="modal-dialog" role="document" >
-                                     <div  class="modal-content"  >
-                                         <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <!-- <h4 class="modal-title" id="myModalLabel">修改记录列表</h4> -->
-                                               <div>
-                <h3 style="text-align:center">
-                  物业费账单
-                  
-                </h3>
-              </div>
-              <!-- #列表头部-->
-                        <table class="form-table">
-                          <tbody>
-                            
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>楼栋号
-                              </td>
-                              <td>一栋</td>
-                            </tr>
-
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>单元房号
-                              </td>
-                              <td>三单元401</td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">
-                                户主姓名
-                              </td>
-                              <td>
-                                张三
-                              </td>
-                            </tr>
-
-                             <tr>
-                                <td class="form-title">
-                                  户型
-                                </td>
-                                <td>
-                                  三房两厅（119平米）
-                                </td>
-                              </tr>
-
-                            
-
-                            <tr>
-                              <td class="form-title">
-                               物业费标准
-                              </td>
-                              <td>
-                                47.6元/年
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               往年欠费
-                              </td>
-                              <td>
-                                ￥0
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               滞纳金
-                              </td>
-                              <td>
-                               ￥0
-                              </td>
-                            </tr>
-
-
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴费周期
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">一年</option>
-                                  <option value="2">两年</option>
-                                  <option value="3">三年</option>
-                                  <option value="4">四年</option>
-                                  <option value="5">五年</option>
-                                </select>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">合计应交金额</td>
-                              <td>
-                                47.6元/年（[往年欠费]+[滞纳金]+[物业费标准]*「缴费周期」，系统会自动计算该楼层的物业费用）
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴纳方式
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">现金</option>
-                                  <option value="1">支付宝</option>
-                                  <option value="2">微信</option>
-                                  <option value="2">银行卡</option>
-                                 
-                                </select>
-                              </td>
-                            </tr>
-                            <tr>
-                                <td class="form-title">
-                                  收款说明
-                                </td>
-                                <td>
-                                  <textarea class="form-control" name="title"></textarea>
-                                </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                       </form>
-                  <table class="table form-table">
-                          <tbody>
-                            <tr>
-                              
-                              <td>
-                              <a href='cost-fee-list.html'> <button type="submit"  class="btn btn-primary btn-lg ">确认</button> </a>
-                               <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
-                               <div id="fade" ></div>
-
-
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                                           </div>
-
-                                      </div>
-                                   </div>
-                              </div>
+                         
                       </td>
           
                     </tr>
 
                    <tr>
-                      <td>三栋</td>
-                      <td>三单元403</td>
-                      <td>四房两厅（139平米）</td>
-                      <td>李玉</td>
-                      <td>13333333333</td>
+                      <td>一栋</td>
+                      <td>三单元401</td>
+                      <td>张三</td>
+                      <td>2016/01/01</td>
+                      <td>2017/12/31</td>
+                      <td>￥0</td>
+                      <td>￥0</td>
                       <td>55.6元/年</td>
-                      
-                     <td>￥55.6</td>
-                       <td>2016/01/01-2017/12/31</td>
+                      <td class="color">￥55.6(往年欠费+滞纳金+物业标准)</td>
                       <td><!-- 添加备注按钮 -->
-                            <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs"><span class="glyphicon glyphicon-arrow-right"></span>查看更多</button></a>
+                            
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                                   <span class="glyphicon glyphicon-yen"></span>
                                   物业费缴纳
                             </button>
+                            <a href="cost-fee-list.html">  <button type="button" class="btn red-bg btn-xs"><span class="glyphicon glyphicon-list-alt"></span>
+                            缴费记录</button></a>
 
                            <!-- 添加备注弹出框 -->
                               <div style="z-index: 9999"  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -532,144 +253,120 @@
                                          <div class="modal-header">
                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <!-- <h4 class="modal-title" id="myModalLabel">修改记录列表</h4> -->
-                                               <div>
-                <h3 style="text-align:center">
-                  物业费账单
-                  
-                </h3>
-              </div>
-              <!-- #列表头部-->
-                        <table class="form-table">
-                          <tbody>
-                            
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>楼栋号
-                              </td>
-                              <td>一栋</td>
-                            </tr>
+                                      <div>
+                                          <h3 style="text-align:center">
+                                            物业费账单
+                                            
+                                          </h3>
+                                      </div>
+                                    <!-- #列表头部-->
+                                              <table class="form-table">
+                                                <tbody>
+                                                  
+                                                  <tr>
+                                                    <td class="form-title">
+                                                      <span class="text-danger">*</span>楼栋号
+                                                    </td>
+                                                    <td>一栋</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="form-title">
+                                                      <span class="text-danger">*</span>单元房号
+                                                    </td>
+                                                    <td>三单元403</td>
+                                                  </tr>
 
+                                                  <tr>
+                                                    <td class="form-title">户主姓名</td>
+                                                    <td>李玉</td>
+                                                  </tr>
 
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>单元房号
-                              </td>
-                              <td>三单元401</td>
-                            </tr>
-
-                            <tr>
-                              <td class="form-title">
-                                户主姓名
-                              </td>
-                              <td>
-                                张三
-                              </td>
-                            </tr>
-
-                             <tr>
-                                <td class="form-title">
-                                  户型
-                                </td>
-                                <td>
-                                  三房两厅（119平米）
-                                </td>
-                              </tr>
-
-                            
-
-                            <tr>
-                              <td class="form-title">
-                               物业费标准
-                              </td>
-                              <td>
-                                47.6元/年
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               往年欠费
-                              </td>
-                              <td>
-                                ￥0
-                              </td>
-                            </tr>
-                             <tr>
-                              <td class="form-title">
-                               滞纳金
-                              </td>
-                              <td>
-                               ￥0
-                              </td>
-                            </tr>
+                                                   <tr>
+                                                      <td class="form-title">户型</td>
+                                                      <td> 三房两厅（119平米）</td>
+                                                    </tr>
+                                                  <tr>
+                                                    <td class="form-title"> 物业费标准</td>
+                                                    <td>55.6元/年</td>
+                                                  </tr>
+                                                   <tr>
+                                                    <td class="form-title">往年欠费</td>
+                                                    <td>￥0</td>
+                                                  </tr>
+                                                   <tr>
+                                                    <td class="form-title">滞纳金</td>
+                                                    <td>￥0</td>
+                                                  </tr>
 
 
 
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴费周期
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">一年</option>
-                                  <option value="2">两年</option>
-                                  <option value="3">三年</option>
-                                  <option value="4">四年</option>
-                                  <option value="5">五年</option>
-                                </select>
-                              </td>
-                            </tr>
+                                                  <tr>
+                                                    <td class="form-title">
+                                                      <span class="text-danger">*</span>缴费周期
+                                                    </td>
+                                                    <td>
+                                                      <select class="form-control chosen" name="status">
+                                                        <option value="1">一年</option>
+                                                        <option value="2">两年</option>
+                                                        <option value="3">三年</option>
+                                                        <option value="4">四年</option>
+                                                        <option value="5">五年</option>
+                                                      </select>
+                                                    </td>
+                                                  </tr>
 
-                            <tr>
-                              <td class="form-title">合计应交金额</td>
-                              <td>
-                                47.6元/年（[往年欠费]+[滞纳金]+[物业费标准]*「缴费周期」，系统会自动计算该楼层的物业费用）
-                              </td>
-                            </tr>
+                                                  <tr>
+                                                    <td class="form-title">合计应交金额</td>
+                                                    <td>
+                                                      55.6元/年（[往年欠费]+[滞纳金]+[物业费标准]*「缴费周期」，系统会自动计算该楼层的物业费用）
+                                                    </td>
+                                                  </tr>
 
-                            <tr>
-                              <td class="form-title">
-                                <span class="text-danger">*</span>缴纳方式
-                              </td>
-                              <td>
-                                <select class="form-control chosen" name="status">
-                                  <option value="1">现金</option>
-                                  <option value="1">支付宝</option>
-                                  <option value="2">微信</option>
-                                  <option value="2">银行卡</option>
-                                 
-                                </select>
-                              </td>
-                            </tr>
-                            <tr>
-                                <td class="form-title">
-                                  收款说明
-                                </td>
-                                <td>
-                                  <textarea class="form-control" name="title"></textarea>
-                                </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                       </form>
-                  <table class="table form-table">
-                          <tbody>
-                            <tr>
-                              
-                              <td>
+                                                  <tr>
+                                                    <td class="form-title">
+                                                      <span class="text-danger">*</span>缴纳方式
+                                                    </td>
+                                                    <td>
+                                                      <select class="form-control chosen" name="status">
+                                                        <option value="1">现金</option>
+                                                        <option value="1">支付宝</option>
+                                                        <option value="2">微信</option>
+                                                        <option value="2">银行卡</option>
+                                                       
+                                                      </select>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="form-title">
+                                                        收款说明
+                                                      </td>
+                                                      <td>
+                                                        <textarea class="form-control" name="title"></textarea>
+                                                      </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                             </form>
+                                           <table class="table form-table">
+                                                <tbody>
+                                                  <tr>
+                                                    
+                                                    <td style="text-align:center;">
 
-                               <a href='cost-fee-list.html'> <button type="submit"  class="btn btn-primary btn-lg ">确认</button> </a>
-                               <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
-                               <div id="fade" ></div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                                                     <a href='cost-fee-list.html'> <button type="submit"  class="btn btn-primary btn-lg " >确认</button> </a>
+                                                     <button type="button"  class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
+                                                     <div id="fade" ></div>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
                                            </div>
 
                                       </div>
                                    </div>
                               </div>
+                              <!--弹框结束-->
                       </td>
           
                     </tr>
