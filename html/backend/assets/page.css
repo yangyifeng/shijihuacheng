@@ -196,7 +196,7 @@ body {
   margin-bottom: 8px;
 }
 .sidebar .form-group .form-control {
-  height: 24px;
+  /*height: 24px;*/
   font-size: 12px;
   padding: 6px;
 }
@@ -254,7 +254,7 @@ body {
   width: 160px;
 }
 .form-table .form-control {
-  height: 24px;
+  /*height: 24px;*/
   font-size: 12px;
   padding: 6px;
 }
